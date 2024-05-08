@@ -7,7 +7,7 @@
 /* Custom properties---------------- */
 
 :root {
-	--ff-primary: 'Poppins';
+	--ff-primary: 'Poppins', arial;
 
 	--fw-reg: 300;
 	--fw-bold: 900;
@@ -66,6 +66,7 @@ body {
 	margin: 0;
 	font-family: var(--ff-primary);
 	font-size: var(--fs-body);
+	list-style: none;
 }
 
 img {
@@ -192,9 +193,8 @@ p {
 }
 
 .hd-li > a:hover {
-	/* background-color: var(--clr-white);
-	border-radius: 50px; */
-	text-decoration: underline;
+	font-size: calc(var(--fs-p) + 1px);
+	transition: 400ms;
 }
 
 .hd-li-button > a {
@@ -228,6 +228,37 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	gap: 10px;
+}
+
+ .ab-ul {
+	height: fit-content;
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	list-style: none;
+	gap: 30px;
+}
+
+.ab-li > a,
+.ab-li > a:focus, 
+.ab-li > a:hover,
+.ab-li > a:active,
+.ab-li > a:visited {
+	text-decoration: none;
+	color: var(--clr-white);
+}
+
+.ab-li > a {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: var(--clr-white);
+} 
+
+.ab-li > a > i{
+	font-size: 25px;
+	color: var(--clr-black);
+	width: auto;
 }
 
 .martin {
@@ -344,7 +375,7 @@ p {
 
 .mask2 {
 	background-image: url('./image/1.svg');
-  background-size: 170%;
+  background-size: 150%;
 	background-position-y: bottom;
 	background-position-x: right;
 	background-repeat:no-repeat;
