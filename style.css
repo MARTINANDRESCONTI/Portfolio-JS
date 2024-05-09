@@ -134,7 +134,8 @@ p {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	padding: 35px 50px;
+	align-items: center;
+	padding: 20px 50px;
 }
 
 .logo {
@@ -156,7 +157,7 @@ p {
 
 .hd-nav {
 	height: fit-content;
-	width: 60%;	
+	width: 90%;	
 }
 
 .hd-ul {
@@ -164,15 +165,21 @@ p {
 	width: 100%;
 	display: flex;
 	justify-content: end;
+	align-items: center;
 	list-style: none;
-	gap: 30px;
+	margin: 0;
 }
 
-.hd-li > a,
-.hd-li > a:focus, 
-.hd-li > a:hover,
-.hd-li > a:active,
-.hd-li > a:visited {
+.hd-li-op {
+	height: fit-content;
+	width: 150px;
+}
+
+.hd-li-op > a,
+.hd-li-op > a:focus, 
+.hd-li-op > a:hover,
+.hd-li-op > a:active,
+.hd-li-op > a:visited {
 	text-decoration: none;
 	color: var(--clr-black);
 }
@@ -186,13 +193,14 @@ p {
 	color: var(--clr-dark);
 }
 
-.hd-li > a {
+.hd-li-op > a {
 	font-size: var(--fs-p);
 	font-weight: 600;
 	padding: 16px 32px;
+	cursor: pointer;
 }
 
-.hd-li > a:hover {
+.hd-li-op > a:hover {
 	font-size: calc(var(--fs-p) + 1px);
 	transition: 400ms;
 }
@@ -207,6 +215,7 @@ p {
 	padding: 16px 36px;
 	margin-left: 40px ;
 	border-radius: 50px;
+	cursor: pointer;
 }
 
 .hd-li-button > a:hover {
@@ -253,12 +262,17 @@ p {
 	width: 50px;
 	border-radius: 50%;
 	background-color: var(--clr-white);
+	cursor: pointer;
 } 
 
 .ab-li > a > i{
 	font-size: 25px;
 	color: var(--clr-black);
 	width: auto;
+}
+
+.ab-li > a:hover {
+	opacity: 0.7;
 }
 
 .martin {
@@ -481,48 +495,17 @@ p {
   width: 18px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root {
-	--fontPoppins: "Poppins", sans-serif;
-	--White: #ffffff;
-	--Grey: #e5e5e5;
-	--Orange: #fca311;
-	--Blue: #14213d;
-	--Black: #000000;
-}
-
 /*------------------------------ INICIO SECCION CONTACTO----------------------------------------------------------- */
-.contact-section {
+
+.contact {
 	height: fit-content;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--White);
-	scroll-margin-top: 15vh;
-}
-
-@media (max-width: 550px) {
-	.contact-section {
-		scroll-margin-top: 20px;
-	}
+	background-color: var(--clr-light);
+	padding-top: 20px;
 }
 
 .form-container {
@@ -532,24 +515,16 @@ p {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	background-color: var(--White);
-	padding: 10px 0px;
+	background-color: var(--clr-light);
 }
 
-.form-title {
-	font-size: 28px;
-	font-weight: 700;
-	color: var(--Black);
-	margin: 15px 0px;
-}
-
-.form-aclaracion {
+.form-ac {
 	font-size: 12px;
 	font-weight: 400;
 	color: gray;
 }
 
-.campos-container {
+.inputs-container {
 	height: 100%;
 	width: 60%;
 	display: flex;
@@ -558,112 +533,83 @@ p {
 	gap: 20px;
 }
 
-.campo-container {
+.input-container {
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
 }
 
-.campo-container > input {
+.input-container > input {
 	height: 40px;
 	width: 100%;
 	border-radius: 50px;
 	padding: 15px;
 }
 
-.campo-container > textarea {
+.input-container > textarea {
 	height: 120px;
 	width: 100%;
 	border-radius: 15px;
 	padding: 15px;
 }
 
-.campo-container > select {
+.input-container > select {
 	height: 40px;
 	width: 150px;
 	border-radius: 50px;
 	padding: 5px 15px;
 }
 
-.campo-container > label {
-	font-size: 16px;
+.input-container > label {
+	font-size: var(--fs-p);
 	font-weight: 500;
 }
 
-.campo-container-p {
-	font-size: 16px;
+.input-container-p {
+	font-size: var(--fs-p);
 	font-weight: 500;
 }
 
-.campo-container > input:focus,
-.campo-container > input:active,
-.campo-container > input:visited,
-.campo-container > input:focus,
-.campo-container > textarea:focus,
-.campo-container > select:focus {
-	background-color: var(--White);
+.input-container > input:focus,
+.input-container > input:active,
+.input-container > input:visited,
+.input-container > input:focus,
+.input-container > textarea:focus,
+.input-container > select:focus {
+	background-color: var(--clr-white);
 	outline: none;
 }
 
-.campo-container-integrantes {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 .form-asterisk {
-	color: var(--Orange);
-}
-
-.form-icon {
-	height: 20px;
-	width: 20px;
+	color: var(--clr-med-dark);
 }
 
 .error {
-	background-color: var(--White);
-	border: solid 4px var(--Orange);
+	background-color: var(--clr-white);
+	border: solid 4px var(--clr-med-dark);
 }
 
 .rm-error {
-	background-color: var(--White);
-	border: solid 4px var(--Blue);
+	background-color: var(--clr-white);
+	border: solid 4px var(--clr-medium);
 }
 
-.mensaje-error {
+.message-error {
 	font-size: 12px;
 	font-weight: 400;
-	color: var(--Orange);
-}
-
-.aceptacion-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.check-mensaje {
-	display: flex;
-	align-items: center;
-}
-
-.aceptacion {
-	height: 20px;
-	width: 20px;
-	margin: 0px 5px;
+	color: var(--clr-med-dark);
 }
 
 .form-submit {
-	height: 40px;
+	height: var(--fs-h2);
 	width: 150px;
-	font-size: 16px;
+	font-size: var(--fs-p);
 	font-weight: 600;
 	padding: 10px 20px;
 	border-radius: 50px;
 	border: none;
-	background-color: var(--Blue);
+	background-color: var(--clr-dark);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -678,264 +624,44 @@ p {
 .form-submit:active,
 .form-submit:visited {
 	text-decoration: none;
-	color: var(--White);
+	color: var(--clr-white);
 }
 
-/*---MOBILE SCREEN (Small size)---*/
-@media screen and (max-width: 430px) {
-	.form-container {
-		width: 85%;
-	}
+/* Footer---------------- */
 
-	.form-title {
-		font-size: 18px;
-		font-weight: 600;
-		margin: 10px 0px;
-	}
-
-	.form-aclaracion {
-		font-size: 10px;
-		margin-bottom: 5px;
-	}
-
-	.campos-container {
-		width: 100%;
-		gap: 12px;
-	}
-
-	.campo-container > label {
-		font-size: 12px;
-		font-weight: 400;
-	}
-
-	.campo-container > input {
-		height: 30px;
-		font-size: 12px;
-		font-weight: 400;
-	}
-
-	.campo-container > textarea {
-		height: 60px;
-		font-size: 12px;
-		font-weight: 400;
-	}
-
-	.campo-container > select {
-		height: 35px;
-		font-size: 12px;
-		font-weight: 400;
-	}
-
-	.campo-container-p {
-		font-size: 12px;
-		font-weight: 400;
-	}
-
-	.form-icon {
-		height: 16px;
-		width: 16px;
-	}
-
-	.mensaje-error {
-		font-size: 10px;
-	}
-
-	.error {
-		border: solid 2px var(--Orange);
-	}
-
-	.rm-error {
-		border: solid 2px var(--Blue);
-	}
-
-	.aceptacion-container > label {
-		font-size: 12px;
-		font-weight: 400;
-		margin-bottom: 5px;
-	}
-
-	.aceptacion {
-		height: 16px;
-		width: 16px;
-		margin: 0px 3px;
-	}
-
-	.form-submit {
-		height: 30px;
-		width: 100px;
-		font-size: 12px;
-		padding: 5px 10px;
-	}
+.ft-container {
+	height: 60px;
+	width: 100%;
+	background-color: var(--clr-dark);
 }
 
-/*---TABLET SCREEN (Medium size)---*/
-@media screen and (min-width: 430px) and (max-width: 730px) {
-	.form-container {
-		width: 65%;
-	}
-
-	.form-title {
-		font-size: 20px;
-		margin: 12px 0px;
-	}
-
-	.form-aclaracion {
-		font-size: 12px;
-		margin-bottom: 3px;
-	}
-
-	.campos-container {
-		width: 100%;
-		gap: 15px;
-	}
-
-	.campo-container > label {
-		font-size: 14px;
-		font-weight: 400;
-	}
-
-	.campo-container > input {
-		height: 35px;
-		font-size: 14px;
-		font-weight: 400;
-	}
-
-	.campo-container > textarea {
-		height: 70px;
-		font-size: 14px;
-		font-weight: 400;
-	}
-
-	.campo-container > select {
-		height: 35px;
-		font-size: 14px;
-		font-weight: 400;
-	}
-
-	.campo-container-p {
-		font-size: 14px;
-		font-weight: 400;
-	}
-
-	.form-icon {
-		height: 16px;
-		width: 16px;
-	}
-
-	.mensaje-error {
-		font-size: 11px;
-	}
-
-	.error {
-		border: solid 3px var(--Orange);
-	}
-
-	.rm-error {
-		border: solid 3px var(--Blue);
-	}
-
-	.aceptacion-container > label {
-		font-size: 14px;
-		font-weight: 400;
-		margin-bottom: 5px;
-	}
-
-	.aceptacion {
-		height: 17px;
-		width: 17px;
-		margin: 0px 3px;
-	}
-
-	.form-submit {
-		height: 35px;
-		width: 100px;
-		font-size: 14px;
-		padding: 5px 10px;
-	}
+.ft-ul {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	gap: 30px;
 }
 
-/*---LAPTOP SCREEN---*/
-@media screen and (min-width: 730px) and (max-width: 930px) {
-	.form-container {
-		width: 60%;
-	}
-
-	.form-title {
-		font-size: 20px;
-		margin: 15px 0px;
-	}
-
-	.form-aclaracion {
-		font-size: 12px;
-		margin-bottom: 5px;
-	}
-
-	.campos-container {
-		width: 100%;
-		gap: 15px;
-	}
-
-	.campo-container > label {
-		font-size: 16px;
-		font-weight: 500;
-	}
-
-	.campo-container > input {
-		height: 40px;
-		font-size: 16px;
-		font-weight: 500;
-	}
-
-	.campo-container > textarea {
-		height: 80px;
-		font-size: 16px;
-		font-weight: 500;
-	}
-
-	.campo-container > select {
-		height: 40px;
-		font-size: 16px;
-		font-weight: 500;
-	}
-
-	.campo-container-p {
-		font-size: 16px;
-		font-weight: 500;
-	}
-
-	.form-icon {
-		height: 18px;
-		width: 18px;
-	}
-
-	.mensaje-error {
-		font-size: 12px;
-	}
-
-	.error {
-		border: solid 4px var(--Orange);
-	}
-
-	.rm-error {
-		border: solid 4px var(--Blue);
-	}
-
-	.aceptacion-container > label {
-		font-size: 16px;
-		font-weight: 500;
-		margin-bottom: 8px;
-	}
-
-	.aceptacion {
-		height: 18px;
-		width: 18px;
-		margin: 0px 5px;
-	}
-
-	.form-submit {
-		height: 40px;
-		width: 120px;
-		font-size: 16px;
-		padding: 5px 10px;
-	}
+.ft-li > a,
+.ft-li > a:focus, 
+.ft-li > a:hover,
+.ft-li > a:active,
+.ft-li > a:visited {
+	text-decoration: none;
+	color: var(--clr-med-dark);
 }
+
+.ft-li > a > i{
+	font-size: 30px;
+	color: var(--clr-med-dark);
+	width: auto;
+	cursor: pointer;
+}
+
+.ft-li > a:hover {
+	opacity: 0.7;
+}
+

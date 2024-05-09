@@ -32,14 +32,18 @@
 			<nav class="hd-nav">
 				<ul class="hd-ul">
 					<li class="hd-li">
-						<a href="#education">
-							Education
-						</a>
+						<div class="hd-li-op">
+							<a href="#education">
+								Education
+							</a>
+						</div>
 					</li>
 					<li class="hd-li">
-						<a href="#projects">
-							Projects
-						</a> 
+						<div class="hd-li-op">
+							<a href="#projects">
+								Projects
+							</a> 
+						</div>
 					</li>
 					<li class="hd-li">
 						<span class="hd-li-button">
@@ -309,79 +313,83 @@
 
 		<!-- Contact section -->
 	
-  <section class="intro" id="contact">
-    		<form class="form-container" id="form-submit">
-			<h2 class="form-title">Envianos tu comentario</h2>
-			<p class="form-aclaracion">
-				Los campos marcados con <span class="form-asterisk">*</span> son
-				obligatorios
+  <section class="intro contact" id="contact">
+    <form class="form-container" id="form-submit">
+			<h2>Send me a message</h2>
+			<p class="form-ac">
+				<span class="form-asterisk">*</span>Please fill out all fields
 			</p>
-			<div class="campos-container">
-				<div class="campo-container">
-					<label for="nombre">
+			<div class="inputs-container">
+				<div class="input-container">
+					<label for="name">
 						<span class="form-asterisk">*</span>
-						Nombre:
+						Name:
 					</label>
-					<input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" class="error"
+					<input type="text" name="name" id="name" class="error"
 						required />
-					<span class="mensaje-error">El campo no puede estar vacio...</span>
+					<span class="message-error">Fill out the field...</span>
 				</div>
 
-				<div class="campo-container">
-					<label for="correo">
+				<div class="input-container">
+					<label for="subject">
 						<span class="form-asterisk">*</span>
-						Correo:
+						Subject:
 					</label>
-					<input type="email" name="correo" id="correo" placeholder="Escribe tu correo" class="error"
+					<input type="text" name="subject" id="subject" class="error"
 						required />
-					<span class="mensaje-error">El campo no puede estar vacio...</span>
+					<span class="message-error">Fill out the field...</span>
 				</div>
 
-				<div class="campo-container">
-					<label for="mensaje">
+				<div class="input-container">
+					<label for="email">
 						<span class="form-asterisk">*</span>
-						Mensaje:
+						E-mail:
 					</label>
-					<p class="form-aclaracion">Maximo de 200 caracteres permitidos</p>
-					<textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje" maxlength="200" class="error"
+					<input type="email" name="email" id="email" class="error"
+						required />
+					<span class="message-error">Fill out the field...</span>
+				</div>
+
+				<div class="input-container">
+					<label for="message">
+						<span class="form-asterisk">*</span>
+						Message:
+					</label>
+					<p class="form-ac">Maximum of 200 characters allowed</p>
+					<textarea name="message" id="message" maxlength="200" class="error"
 						required></textarea>
-					<span class="mensaje-error">El campo no puede estar vacio...</span>
-				</div>
+					<span class="message-error">Fill out the field...</span>
+				</div>			
 
-				<div class="campo-container campo-container-integrantes">
-					<p class="campo-container-p">
-						<span class="form-asterisk">*</span>
-						Elige el integrante que quieras que te responda:
-					</p>
-					<select name="integrante" id="integrante" class="error" required>
-						<option value="" label="Selecciona" selected></option>
-						<option value="Ani">Ani</option>
-						<option value="Oscar">Oscar</option>
-						<option value="Danu">Danu</option>
-						<option value="Martin">Martin</option>
-					</select>
-					<span class="mensaje-error">El campo no puede estar vacio...</span>
-				</div>
-
-				<div class="aceptacion-container">
-					<label>
-						<span class="form-asterisk">*</span>
-						Acepto recibir la respuesta via mail
-						<img src="./image/Icon.png" class="form-icon" alt="Icon image" />
-					</label>
-					<div class="check-mensaje">
-						<input type="checkbox" name="aceptacion" id="check" class="aceptacion error" required />
-						<span class="mensaje-error">El campo no puede estar vacio...</span>
-					</div>
-				</div>
-
-				<input type="submit" value="Enviar" class="form-submit" />
+				<input type="submit" value="Send" class="form-submit" />
 			</div>
 		</form>
   </section>
-	
-  <footer>
 
+	<!-- Footer -->
+	
+  <footer class="ft-container">
+		<ul class="ft-ul">
+			<li class="ft-li">
+				<a href="http://wa.me/+5492616117708" target="_blank">
+					<i class="fa-brands fa-square-whatsapp"></i>
+				</a>
+			</li>
+			<li class="ft-li">
+				<a class="pro-github"
+					href="https://www.linkedin.com/in/martinandresconti/"
+					target='_blank'>
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+			</li>
+			<li class="ft-li">
+				<a class="pro-github"
+					href="https://github.com/MARTINANDRESCONTI/"
+					target='_blank'>
+					<i class="fa-brands fa-square-github"></i>
+				</a>
+			</li>
+		</ul>
   </footer>
   <script src="./script.js"></script>  
 </body>
