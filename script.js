@@ -1,32 +1,33 @@
 //form --------------------------------------------------------------------------------
 
 const submitForm = document.getElementById("form-submit");
-const n = document.getElementById("nombre");
-const mail = document.getElementById("correo");
-const message = document.getElementById("mensaje");
-const person = document.getElementById("integrante");
-const checkbox = document.getElementById("check");
+const n = document.getElementById("name");
+const subject = document.getElementById("subject");
+const mail = document.getElementById("email");
+const message = document.getElementById("message");
+
 
 function errorHandler(value) {
-	value.nextElementSibling.textContent = "el campo no puede estar vacio";
+	// value.nextElementSibling.textContent = "Fill out the field...";
 	value.classList.remove("rm-error");
 	value.classList.add("error");
 }
 
-submitForm.addEventListener("submit", (event) => {
-	event.preventDefault();
-	alert("Mensaje enviado con exito...");
-	n.value = "";
-	errorHandler(n);
-	mail.value = "";
-	errorHandler(mail);
-	message.value = "";
-	errorHandler(message);
-	person.value = "";
-	errorHandler(person);
-	checkbox.checked = false;
-	errorHandler(checkbox);
-});
+// submit function to fill with backend !!!!
+
+// submitForm.addEventListener("submit", (event) => {
+// 	event.preventDefault();
+// 	console.log("I am here");
+// 	n.value = "";
+// 	errorHandler(n);
+// 	subject.value = "";
+// 	errorHandler(subject);	
+// 	mail.value = "";
+// 	errorHandler(mail);
+// 	message.value = "";
+// 	errorHandler(message);
+// 	event.submitForm()
+// });
 
 const camposFormulario = document.querySelectorAll("[required]");
 
@@ -36,12 +37,12 @@ camposFormulario.forEach((campo) => {
 });
 
 function verificarCampor(campo) {
-	if (campo.validity.valueMissing == false) {
-		const errorMenssage = campo.nextElementSibling;
-		errorMenssage.textContent = "";
+	if (campo.validity.valueMissing == false && campo.validity.typeMismatch == false) {
+		// const errorMenssage = campo.nextElementSibling;
+		// errorMenssage.textContent = "";
 		campo.classList.remove("error");
 		campo.classList.add("rm-error");
-		console.log("estoy en valueMissin");
+		console.log(campo.validity);
 	} else {
 		errorHandler(campo);
 	}

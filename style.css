@@ -61,11 +61,11 @@ html {
 }
 
 body {
-	background: var(--clr-light) ;
+	background: var(--clr-dark) ;
 	color: var(--clr-black);
 	margin: 0;
 	font-family: var(--ff-primary);
-	font-size: var(--fs-body);
+	font-size: var(--fs-p);
 	list-style: none;
 }
 
@@ -75,10 +75,12 @@ img {
 }
 
 .intro {
-	padding: 0px 15%;
+	padding: 0px 18%;
 	height: fit-content;
 	width: 100%;
+	padding-top: 50px;
 	padding-bottom: 80px;
+	margin-bottom: 0px;
 }
 
 /* Typography---------------- */
@@ -135,7 +137,7 @@ p {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 50px;
+	padding: 40px 50px 0px 50px;
 }
 
 .logo {
@@ -282,118 +284,7 @@ p {
   background-repeat: none;
   background-size: cover;
 	border-radius: 50%;
-}
-
-/* Skills---------------- */
-
-.skills {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-}
-
-.skills-list {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	gap: 15px;
-	list-style: none;
-	flex-wrap: wrap;
-	align-items: center;
-}
-
-.skills-list li {
-	width: 150px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border: solid 5px var(--clr-dark);
-	border-radius: 15px;
-	padding: 5px;
-}
-
-.skills-icon {
-	height: 30px;
-}
-
-/* Education---------------- */
-
-.education {
-	height: 100%;
-	width: 100%;
-	background-color: var(--clr-white);
-	padding-top: 25px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
-}
-
-.know-card-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 15px;
-}
-
-.know-card {
-	height: fit-content;
-	width: 400px;
-	background-color: var(--clr-med-light);
-	border-radius: 15px;
-	padding: 15px;
-}
-
-/* Interests---------------- */
-
-.interests {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	padding-top: 25px;
-}
-
-.int-list {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	gap: 25px;
-	list-style: none;
-	flex-wrap: wrap;
-	align-items: center;
-}
-
-.int-list li {
-	height: 80px;
-	width: 100px;
-	background-color: var(--clr-white);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 15px;
-	padding: 5px;
-}
-
-.int-icon {
-	height: 50px;
-	width: auto;
-}
-
-/* Mask2---------------- */
-
-.mask2 {
-	background-image: url('./image/1.svg');
-  background-size: 150%;
-	background-position-y: bottom;
-	background-position-x: right;
-	background-repeat:no-repeat;
-	overflow: hidden;
+	margin-bottom: 80px;
 }
 
 /* Projects---------------- */
@@ -405,17 +296,15 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	padding-top: 20px;
 	color: var(--clr-white);
-	gap: 20px;
-	padding-top: 25px;
+	gap: 40px;
 }
 
 .pro-list {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	gap: 25px;
+	gap: 80px;
 	list-style: none;
 	flex-wrap: wrap;
 	align-items: center;
@@ -475,8 +364,8 @@ p {
 
 .pro-website,
 .pro-github {
-  height: 30px;
-  width: 30px;
+  height: 45px;
+  width: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -495,6 +384,134 @@ p {
   width: 18px;
 }
 
+/* Mask2---------------- */
+
+.mask2 {
+	background-image: url('./image/1.svg');
+  background-size: 150%;
+	background-position-y: bottom;
+	background-position-x: right;
+	background-repeat:no-repeat;
+	overflow: hidden;
+}
+
+/* Skills---------------- */
+
+.skills {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	color: var(--clr-black);
+	background-color: var(--clr-white);
+	gap: 40px;
+}
+
+.skills-list {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	list-style: none;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.skills-list li {
+	width: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--clr-white);
+	color: var(--clr-black);
+	border: solid 5px var(--clr-dark);
+	border-radius: 15px;
+	padding: 5px;
+}
+
+.skills-icon {
+	height: 30px;
+}
+
+/* Education---------------- */
+
+.education {
+	height: 100%;
+	width: 100%;
+	background-color: var(--clr-light);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+}
+
+.know-card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 50px;
+}
+
+.know-card {
+	height: fit-content;
+	width: 400px;
+	background-color: var(--clr-med-light);
+	border-radius: 15px;
+	padding: 15px;
+}
+
+/* Interests---------------- */
+
+.interests {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: var(--clr-white);
+	gap: 40px;
+}
+
+.int-list {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	list-style: none;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.int-list li {
+	height: 80px;
+	width: 100px;
+	background-color: var(--clr-light);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	padding: 5px;
+}
+
+.int-icon {
+	height: 50px;
+	width: auto;
+}
+
+/* Mask3---------------- */
+
+.mask3 {
+	background-image: url('./image/3.svg');
+  background-size: 130%;
+	background-position-y: bottom;
+	background-position-x: center;
+	background-repeat:no-repeat;
+	overflow: hidden;
+}
+
 /*------------------------------ INICIO SECCION CONTACTO----------------------------------------------------------- */
 
 .contact {
@@ -504,8 +521,7 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--clr-light);
-	padding-top: 20px;
+	margin-bottom: 0px;
 }
 
 .form-container {
@@ -515,7 +531,7 @@ p {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	background-color: var(--clr-light);
+	/* background-color: var(--clr-light); */
 }
 
 .form-ac {
@@ -541,7 +557,7 @@ p {
 }
 
 .input-container > input {
-	height: 40px;
+	height: 60px;
 	width: 100%;
 	border-radius: 50px;
 	padding: 15px;
@@ -552,13 +568,6 @@ p {
 	width: 100%;
 	border-radius: 15px;
 	padding: 15px;
-}
-
-.input-container > select {
-	height: 40px;
-	width: 150px;
-	border-radius: 50px;
-	padding: 5px 15px;
 }
 
 .input-container > label {
@@ -586,12 +595,12 @@ p {
 }
 
 .error {
-	background-color: var(--clr-white);
-	border: solid 4px var(--clr-med-dark);
+	background-color: #ff880010;
+	border: solid 4px var(--clr-med-dark);	
 }
 
 .rm-error {
-	background-color: var(--clr-white);
+	background-color: #27187e10;
 	border: solid 4px var(--clr-medium);
 }
 
@@ -602,7 +611,7 @@ p {
 }
 
 .form-submit {
-	height: var(--fs-h2);
+	height: 50px;
 	width: 150px;
 	font-size: var(--fs-p);
 	font-weight: 600;
@@ -630,8 +639,9 @@ p {
 /* Footer---------------- */
 
 .ft-container {
-	height: 60px;
+	height: 80px;
 	width: 100%;
+	margin-top: 0px;
 	background-color: var(--clr-dark);
 }
 
@@ -642,7 +652,7 @@ p {
 	justify-content: center;
 	align-items: center;
 	list-style: none;
-	gap: 30px;
+	gap: 90px;
 }
 
 .ft-li > a,
@@ -652,10 +662,12 @@ p {
 .ft-li > a:visited {
 	text-decoration: none;
 	color: var(--clr-med-dark);
+	background-color: var(--clr-dark);
 }
 
 .ft-li > a > i{
-	font-size: 30px;
+	font-size: 35px;
+	background-color: var(--clr-dark);
 	color: var(--clr-med-dark);
 	width: auto;
 	cursor: pointer;
