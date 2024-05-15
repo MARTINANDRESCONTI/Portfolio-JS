@@ -82,7 +82,7 @@ img {
 	padding: 0px 15%;
 	height: fit-content;
 	width: 100%;
-	padding-top: 50px;
+	padding-top: 100px;
 	padding-bottom: 80px;
 	margin-bottom: 0px;
 }
@@ -92,7 +92,7 @@ img {
 		padding: 0px 12%;
 		height: fit-content;
 		width: 100%;
-		padding-top: 50px;
+		padding-top: 100px;
 		padding-bottom: 80px;
 		margin-bottom: 0px;
 	}
@@ -104,7 +104,7 @@ img {
 		padding: 0px 10%;
 		height: fit-content;
 		width: 100%;
-		padding-top: 50px;
+		padding-top: 80px;
 		padding-bottom: 80px;
 		margin-bottom: 0px;
 	}
@@ -179,7 +179,7 @@ p {
 /* Mask---------------- */
 
 .mask {
-	background-image: url('./image/2.svg');
+	background-image: url('./image/1.svg');
   background-size: 150%;
 	background-position-x: left ;
 	background-position-y: center;
@@ -187,9 +187,14 @@ p {
 	overflow: hidden;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	.mask {
-  	background-size: 170%;
+  	background-size: 200%;
+	}
+
+}@media screen and (max-width: 800px) {
+	.mask {
+  	background-size: 250%;
 	}
 }
 
@@ -203,7 +208,7 @@ p {
 
 /* Header---------------- */
 .header {
-	height: fit-content;
+	height: 100px;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -342,10 +347,13 @@ p {
 /* Section About---------------- */
 
 .about {
+	height: calc(100vh - 100px);
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 40px;
+	padding-top: 17%;
 }
 
 .about-intro {
@@ -416,6 +424,7 @@ p {
 
 @media screen and (max-width: 800px) {
 	.about {
+		padding-top: 20%;
 		gap: 20px;
 	}
 
@@ -443,6 +452,37 @@ p {
 
 }
 
+/* Mask2---------------- */
+
+.mask2 {
+	background-image: url('./image/2.svg');
+  background-size: 200%;
+	background-position-y: bottom;
+	background-position-x: right;
+	background-repeat:no-repeat;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  .mask2 {	
+  	background-size: 300%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.mask2 {	
+  	background-size: 450%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+}	
+
+@media screen and (max-width: 430px) {
+
+}
+
 /* Projects---------------- */
 
 .projects {
@@ -453,7 +493,10 @@ p {
 	align-items: center;
 	justify-content: space-around;
 	color: var(--clr-white);
-	gap: 40px;
+}
+
+.projects > h2 {
+	margin-bottom: 12%;
 }
 
 .pro-list {
@@ -575,29 +618,6 @@ p {
 
 }
 
-/* Mask2---------------- */
-
-.mask2 {
-	background-image: url('./image/1.svg');
-  background-size: 150%;
-	background-position-y: bottom;
-	background-position-x: right;
-	background-repeat:no-repeat;
-	overflow: hidden;
-}
-
-@media screen and (max-width: 800px) {
-
-}
-
-@media screen and (max-width: 600px) {
-
-}	
-
-@media screen and (max-width: 430px) {
-
-}
-
 /* Skills---------------- */
 
 .skills {
@@ -608,7 +628,10 @@ p {
 	justify-content: space-around;
 	color: var(--clr-black);
 	background-color: var(--clr-white);
-	gap: 40px;
+}
+
+.skills > h2 {
+	margin-bottom: 12%;
 }
 
 .skills-list {
@@ -659,7 +682,10 @@ p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 40px;
+}
+
+.education > h2 {
+	margin-bottom: 12%;
 }
 
 .know-card-container {
@@ -709,7 +735,10 @@ p {
 	align-items: center;
 	justify-content: space-around;
 	background-color: var(--clr-white);
-	gap: 40px;
+}
+
+.interests > h2 {
+	margin-bottom: 12%;
 }
 
 .int-list {
@@ -778,24 +807,24 @@ p {
 
 .mask3 {
 	background-image: url('./image/3.svg');
-  background-size: 150%;
+  background-size: 200%;
 	background-position-y: bottom;
-	background-position-x: center;
+	background-position-x: right;
 	background-repeat:no-repeat;
 	overflow: hidden;
 }
 
 @media screen and (max-width: 1000px) {
 	.mask3 {
-		background-size: 180%;
+		background-size: 250%;
 	}
 }
 
 @media screen and (max-width: 800px) {
 	.mask3 {
-		background-size: 230%;
-		background-position-y: top;
-		background-position-x: left;
+		background-size: 300%;
+		/* background-position-y: top;
+		background-position-x: left; */
 	}
 
 }
@@ -817,7 +846,10 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 0px;
+}
+
+.contact > h2 {
+	margin-bottom: 8%;
 }
 
 .form-container {
@@ -841,7 +873,6 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	gap: 20px;
 }
 
 .input-container {
@@ -849,6 +880,7 @@ p {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
+	margin-bottom: 15%;
 }
 
 .input-container > input {
