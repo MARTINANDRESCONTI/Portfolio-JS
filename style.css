@@ -34,7 +34,7 @@
 		--fs-h3: 26px;
 		--fs-h4: 22px;
 		--fs-p: 16px;
-		line-height: 1.0;
+		line-height: 1.5;
 	}
 }
 
@@ -141,7 +141,7 @@ h1,
 h2,
 h3,
 h4 {
-	line-height: 1.1;
+	line-height: 1.6;
 	margin: 0;
 }
 
@@ -180,7 +180,7 @@ p {
 
 .mask {
 	background-image: url('./image/1.svg');
-  background-size: 150%;
+  background-size: 200%;
 	background-position-x: left ;
 	background-position-y: center;
 	background-repeat:no-repeat;
@@ -197,13 +197,15 @@ p {
   	background-size: 250%;
 	}
 }
-
+/* 
 @media screen and (max-width: 600px) {
 
-}	
+}	 */
 
 @media screen and (max-width: 430px) {
-
+	.mask {
+  	background-size: 300%;
+	}
 }	
 
 /* Header---------------- */
@@ -337,23 +339,56 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+	.logo {
+		height: 50px;
+		width: 50px;
+	}
 
+	.logo img {
+		height: 30px;
+	}	
 }	
 
 @media screen and (max-width: 430px) {
+	.header {
+		align-items:self-end;
+		height: fit-content;
+		padding: 5px;
+	}
 
+	.logo {
+		height: 40px;
+		width: 40px;
+		margin-left: 0;
+		margin-bottom: 25px;
+	}
+
+	.logo img {
+		height: 25px;
+	}	
+
+	.hd-ul {
+		height: fit-content;
+	}
+
+	.hd-li-button > a {
+		font-weight: 400;
+		border:solid 3px var(--clr-med-dark);
+		padding: 10px 14px;
+	}
+	
 }
 
 /* Section About---------------- */
 
 .about {
-	height: calc(100vh - 100px);
+	height: fit-content;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 40px;
-	padding-top: 17%;
+	padding-top: 15%;
 }
 
 .about-intro {
@@ -445,10 +480,31 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+	.about {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		padding-top: 40px;
+	}
+
+	.martin {
+		height: 100px;
+		width: 100px;
+		margin-left: 30px;
+		margin-bottom: 0px;
+	}
 
 }	
 
 @media screen and (max-width: 430px) {
+	.martin {
+		height: 70px;
+		width: 70px;
+		margin-left: 15px;
+	}
+
+	.ab-li > a > i{
+		font-size: 18px;
+	}
 
 }
 
@@ -500,6 +556,7 @@ p {
 }
 
 .pro-list {
+	height: fit-content;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -507,6 +564,7 @@ p {
 	list-style: none;
 	flex-wrap: wrap;
 	align-items: center;
+	padding-left: 0;
 }
 
 /* Project Card */
@@ -597,7 +655,9 @@ p {
 @media screen and (max-width: 800px) {
 	.pro-list {
 		flex-direction: column;
-		gap: 50px;
+		align-items: center;
+		justify-content: center;
+		gap: 70;
 	}
 
 	.pro-card-container {		
@@ -611,10 +671,32 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+	.pro-list {
+		gap: 70px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.pro-card-container {		
+		height: 350px;
+		width: 280px;
+	}
+
+	.pro-buttoncontainer {
+		padding: 0px 10px;	
+	}
 
 }	
 
 @media screen and (max-width: 430px) {
+	.pro-card-container {		
+		height: 300px;
+		width: 200px;
+	}
+
+	.pro-buttoncontainer {
+		padding: 0px 5px;	
+	}
 
 }
 
@@ -642,6 +724,7 @@ p {
 	list-style: none;
 	flex-wrap: wrap;
 	align-items: center;
+	padding-left: 0;
 }
 
 .skills-list li {
@@ -666,11 +749,25 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+	.skills-list li {
+		width: 120px;
+	}
+
+	.skills-icon {
+		height: 25px;
+	}
 
 }	
 
 @media screen and (max-width: 430px) {
-
+	.skills-list li {
+		width: 100px;
+	}
+	.skills-list {
+				padding-left: 5%;
+		padding-right: 5%;
+		gap: 30px;
+	}
 }
 
 /* Education---------------- */
@@ -696,22 +793,41 @@ p {
 }
 
 .know-card {
-	height: fit-content;
+	height: 320px;
 	width: 400px;
-	background-color: var(--clr-med-light);
-	border-radius: 15px;
-	padding: 15px;
+	background-color: var(--clr-light);
+}
+
+.ed-icon {
+	height: 60%;
+	width: 100%;
+	padding: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--clr-white);
+	margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1215px) {
+	.know-card-container {
+		gap: 10px;
+	}
+
 	.know-card {
-		height: fit-content;
+		height: 400px;
 		width: 80%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: 15px;
+		background-color: var(--clr-light);
 	}
+
+	.ed-icon {
+		overflow: hidden;
+	}
+
 }
 
 @media screen and (max-width: 800px) {
@@ -719,11 +835,17 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-
+	.know-card {
+		height: 300px;
+		width: 380px;
+	}
 }	
 
 @media screen and (max-width: 430px) {
-
+	.know-card {
+		height: 280px;
+		width: 300px;
+	}
 }
 
 /* Interests---------------- */
@@ -749,6 +871,7 @@ p {
 	list-style: none;
 	flex-wrap: wrap;
 	align-items: center;
+	padding-left: 0;
 }
 
 .int-list li {
@@ -796,10 +919,19 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-
+	.int-list {
+		gap: 50px;
+		padding-left: 20%;
+		padding-right: 20%;
+	}
 }	
 
 @media screen and (max-width: 430px) {
+	.int-list {
+		gap: 30px;
+		padding-left: 15%;
+		padding-right: 15%;
+	}
 
 }
 
@@ -823,17 +955,19 @@ p {
 @media screen and (max-width: 800px) {
 	.mask3 {
 		background-size: 300%;
-		/* background-position-y: top;
-		background-position-x: left; */
 	}
-
 }
 
 @media screen and (max-width: 600px) {
-
+	.mask3 {
+		background-size: 380%;
+	}
 }	
 
 @media screen and (max-width: 430px) {
+		.mask3 {
+		background-size: 480%;
+	}
 
 }
 
@@ -964,6 +1098,10 @@ p {
 }
 
 @media screen and (max-width: 1000px) {
+	.form-container {
+		width: 90%;
+	}
+
 	.inputs-container {
 		width: 80%;
 	}
@@ -973,13 +1111,32 @@ p {
 }
 
 @media screen and (max-width: 800px) {
+	.form-container {
+		width: 75%;
+	}
+
 	.inputs-container {
 		width: 100%;
 	}
 }
 
 @media screen and (max-width: 600px) {
+	.contact {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
+	.form-container {
+		width: 70%;
+	}
+
+	.inputs-container {
+		width: 100%;
+	}
+
+	.input-container {
+		width: 100%;
+	}
 }	
 
 @media screen and (max-width: 430px) {
@@ -1002,6 +1159,7 @@ p {
 	justify-content: center;
 	align-items: center;
 	list-style: none;
+	padding-left: 0;
 	gap: 90px;
 }
 
@@ -1046,10 +1204,15 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+	.ft-ul {
+		gap: 50px;
+	}
 
 }	
 
 @media screen and (max-width: 430px) {
-
+	.ft-ul {
+		gap: 40px;
+	}
 }
 
