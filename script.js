@@ -6,7 +6,6 @@ const subject = document.getElementById("subject");
 const mail = document.getElementById("email");
 const message = document.getElementById("message");
 
-
 function errorHandler(value) {
 	// value.nextElementSibling.textContent = "Fill out the field...";
 	value.classList.remove("rm-error");
