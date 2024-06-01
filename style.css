@@ -743,6 +743,11 @@ p {
 }	
 
 @media screen and (max-width: 430px) {
+	.pro-card-container,
+	.pro-card-container:nth-child(even) {	
+		width: 90%;
+	}
+
 	.pro-icon {
 		height: 14px;
 		width: 14px;
