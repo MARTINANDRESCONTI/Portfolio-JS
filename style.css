@@ -344,20 +344,21 @@ p {
 	.logo img {
 		height: 30px;
 	}	
+
+	
 }	
 
 @media screen and (max-width: 430px) {
 	.header {
 		align-items:self-end;
-		height: fit-content;
+		height: min-content;
 		padding: 5px;
 	}
 
 	.logo {
 		height: 40px;
 		width: 40px;
-		margin-left: 0;
-		margin-bottom: 25px;
+		margin-left: 10px;
 	}
 
 	.logo img {
@@ -368,12 +369,9 @@ p {
 		height: fit-content;
 	}
 
-	.hd-li-button > a {
-		font-weight: 400;
-		border:solid 3px var(--clr-med-dark);
-		padding: 10px 14px;
-	}
-	
+	.hd-li-button {
+		display: none;
+	}	
 }
 
 /* Section About---------------- */
@@ -435,6 +433,10 @@ p {
 
 .ab-li > a:hover {
 	opacity: 0.7;
+}
+
+.ab-mail {
+	display: none;
 }
 
 .martin {
@@ -500,10 +502,22 @@ p {
 		height:50px;
 		width: 50px;
 	}
-
 }	
 
 @media screen and (max-width: 430px) {
+	.about {
+		padding-top: 0px;
+		padding-bottom: 40px;
+		margin-top: 0px;
+	}
+
+	.ab-img-container{
+		display: flex;
+		justify-content: end;
+		padding-right: 40px;
+		width: 100%;
+	}
+
 	.martin {
 		height: 70px;
 		width: 70px;
@@ -519,6 +533,24 @@ p {
 	.ab-li > a {
 		height:40px;
 		width: 40px;
+	}
+
+
+	.ab-mail {
+		display:inline;
+		margin-left: auto;
+		margin-right: 40px;
+		padding: 20px 0px;
+		font-weight: 700;
+	}
+
+	.ab-mail > a,
+	.ab-mail > a:focus,
+	.ab-mail > a:hover,
+	.ab-mail > a:active,
+	.ab-mail > a:visited {
+		text-decoration: none;
+		color: var(--clr-dark);
 	}
 }
 
@@ -727,9 +759,20 @@ p {
 		color: var(--clr-black);
 	}
 
-	.pro-website {
-		display: none;
+	.pro-website,
+	.pro-website > img {
+		height: 150px;
+		width: 150px;
+		position: absolute;
+		top: 50px;
+		right: auto;
+		left: auto;
+		background-color: transparent;
+		filter: invert(60%);
+		opacity: 0.7;
 	}
+
+
 
 	.pr-github {
 		height: 30px;
@@ -748,10 +791,10 @@ p {
 		width: 90%;
 	}
 
-	.pro-icon {
+	/* .pro-icon {
 		height: 14px;
 		width: 14px;
-	} 
+	}  */
 
 }
 
@@ -804,7 +847,7 @@ p {
 
 @media screen and (max-width: 600px) {
 	.skills-list li {
-		width: 120px;
+		width: 130px;
 	}
 
 	.skills-icon {
@@ -815,7 +858,7 @@ p {
 
 @media screen and (max-width: 430px) {
 	.skills-list li {
-		width: 100px;
+		width: 120px;
 	}
 	.skills-list {
 		padding-left: 5%;
