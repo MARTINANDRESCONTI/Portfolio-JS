@@ -514,7 +514,7 @@ p {
 	.ab-img-container{
 		display: flex;
 		justify-content: end;
-		padding-right: 40px;
+		padding-right: 10px;
 		width: 100%;
 	}
 
@@ -539,7 +539,7 @@ p {
 	.ab-mail {
 		display:inline;
 		margin-left: auto;
-		margin-right: 40px;
+		margin-right: 10px;
 		padding: 20px 0px;
 		font-weight: 700;
 	}
