@@ -761,7 +761,7 @@ p {
 
 	.pro-website,
 	.pro-website > img {
-		height: 150px;
+		height: auto;
 		width: 150px;
 		position: absolute;
 		top: 50px;
@@ -770,6 +770,7 @@ p {
 		background-color: transparent;
 		filter: invert(60%);
 		opacity: 0.7;
+		user-select: none;
 	}
 
 
@@ -790,11 +791,6 @@ p {
 	.pro-card-container:nth-child(even) {	
 		width: 90%;
 	}
-
-	/* .pro-icon {
-		height: 14px;
-		width: 14px;
-	}  */
 
 }
 
